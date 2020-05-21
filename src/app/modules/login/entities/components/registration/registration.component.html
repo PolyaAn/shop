@@ -1,0 +1,23 @@
+<div class="login">
+  <div class="title">Регистрация</div>
+  <div class="input" [formGroup]="myGroup">
+    <mat-form-field floatLabel="never">
+      <label>
+        <input matInput
+               placeholder="Введите логин..."
+               type="text"
+               formControlName="login">
+      </label>
+      <!--  <mat-error>{{loginErrorMessage}}</mat-error>-->
+    </mat-form-field>
+    <mat-divider></mat-divider>
+  </div>
+  <button class="button"
+          mat-button
+          (click)="registration()">
+    Зарегистрироваться
+  </button>
+
+<!--  [routerLink]="['/shop']"-->
+  <a href="#/login" class="link">Вернуться к странице входа</a>
+</div>

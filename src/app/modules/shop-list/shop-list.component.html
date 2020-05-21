@@ -1,0 +1,68 @@
+<div class="title">
+  {{((user$ | async).customer.login)}}
+
+    <button [routerLink]="['/login']"
+            class="button"
+            mat-button>Выйти
+    </button>
+</div>
+<div class="content">
+  <div class="add">
+
+    <div class="input" [formGroup]="myGroup">
+
+      <mat-form-field class="input-text" floatLabel="never">
+        <label>
+          <input matInput
+                 placeholder="Введите название продукта..."
+                 type="text"
+                 formControlName="name">
+        </label>
+      </mat-form-field>
+      Цена:
+      <mat-form-field class="input-price" floatLabel="never">
+
+        <label>
+          <input matInput
+                 type="number"
+                 formControlName="price">
+        </label>
+      </mat-form-field>
+      Количество:
+      <mat-form-field class="input-count" floatLabel="never">
+
+        <label>
+          <input matInput
+                 type="number"
+                 formControlName="count">
+        </label>
+      </mat-form-field>
+
+
+    </div>
+    <button (click)="add()"
+            class="button"
+            mat-button>Добавить
+    </button>
+
+  </div>
+
+  <div class="list">
+    <div *ngFor="let product of products$ | async">
+      <div class="product">
+        <div class="text"> {{product.name}} </div>
+        <div class="price"> {{product.price}} p</div>
+        <div class="count"> x {{product.count}} </div>
+        <button (click)="delete(product.id)"
+                class="button"
+                mat-button>Удалить
+        </button>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  ИТОГ: {{((user$ | async).customer.orderPrice)}}
+</div>

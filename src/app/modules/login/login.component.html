@@ -1,0 +1,20 @@
+<div class="login">
+  <div class="title">Вход</div>
+  <div class="input">
+  <div [formGroup]="myGroup">
+        <mat-form-field floatLabel="never">
+      <label>
+        <input matInput
+               placeholder="Введите логин..."
+               type="text"
+               formControlName="login">
+      </label>
+        </mat-form-field>
+  </div>
+    <mat-divider></mat-divider>
+  </div>
+  <button (click)="login()"
+          class="button"
+          mat-button>Войти</button>
+  <a href="#/registration" class="link">Зарегистрироваться</a>
+</div>
