@@ -1,4 +1,4 @@
-<div *ngIf="((message|async).text && (display))"
+<div *ngIf="((message|async) && (message|async).text && (display))"
      class="message"
      [ngClass]="{
      green: (message|async).successOfResponse,
