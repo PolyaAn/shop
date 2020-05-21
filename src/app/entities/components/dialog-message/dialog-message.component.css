@@ -1,0 +1,23 @@
+:host {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 600px;
+  height: 60px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.51);
+}
+
+.green {
+  background-color: rgba(201, 255, 227, 0.54);
+}
+.red {
+  background-color: rgba(255, 209, 209, 0.54);
+}

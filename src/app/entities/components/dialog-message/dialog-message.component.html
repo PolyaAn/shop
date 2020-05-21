@@ -1,0 +1,8 @@
+<div *ngIf="((message|async).text && (display))"
+     class="message"
+     [ngClass]="{
+     green: (message|async).successOfResponse,
+     red: !(message|async).successOfResponse
+     }">
+  {{(message|async).text}}
+</div>
